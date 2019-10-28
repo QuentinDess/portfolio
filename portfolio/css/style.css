@@ -5,9 +5,11 @@ body{
     
     
 }
-
+.none{
+  display: none !important;
+}
 .test_nav{
-    display: none;
+    
     height: 100vh;
     width: 15%;
     background-color:#056FF2;
@@ -23,7 +25,7 @@ body{
 }
 /*Background welcolme page*/
 .blur_bckgnd{
-    height:92vh;
+    height:95vh;
     width: 100%;
     background-image:url("../img/backgroungWecolmeWrap.jpg");
     filter: hue-rotate(61deg) grayscale(80%) blur(2px);
@@ -36,7 +38,7 @@ body{
     z-index: -1;
 }
 .content_bckgnd{
-    height:92vh;
+    height:98vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -44,26 +46,183 @@ body{
     align-items: center;
 
 }
+/*animation css */
 .name_animated {
     font-size: 5em;
-    clear: left;
     color: red;
+    position: relative;
+    animation-name: rightoleft ;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards; /*fait que l'animation commence à la première keyframe*/
+
     
 }
+@keyframes rightoleft {
+  0%   { left: -70%; top:0px;}
+  25%  {right: 25%; top:0%;}
+  50%  { right:25%; top:00px;}
+  75%  { right:25%; top:0px;}
+  100%  {left:0px; top:0px;}
+}
+
+.animated_description_nav{
+  color:black;
+  animation-name: lefttoright;
+  animation-duration: 6s;
+  
+  animation-fill-mode: backwards;
+}
+@keyframes lefttoright{
+
+    0% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 
 /* slider test*/
 .slide_size{
     width: 50%;
-    height: 25%;
+
+}
+/* skill page css */
+.skill_page{
+  
+  height: 98vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;        
+}
+.half_cut{
+  padding: 7% 0% 1% 2%;
+  width: 50%;
+  border-right: black solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+/* skill side */
+.animated_skill{
+  height: 10%;
+  background-color: coral;
+}
+.progress_bar_skill{
+  height: 60%;
+  background-color: darkcyan;
+  margin: 0 0 2% 0;
+}
+.other_skill{
+  height: 30%;
+  background-color: darkmagenta;
+}
+/*project side */
+.animated_project{
+height: 10%;
+background-color: blue;
+}
+.project{
+  height: 90%;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project_img_bloc{
+  width: 50%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_description_bloc{
+  width:50%;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project_description{
+  height: 50%;
+  margin: 5%;
+}
+.orange{
+  background-color: orange;
+}
+.purple{
+  background-color: purple;
+}
+.yellow{
+  background-color: yellow;
+}
+.brown{
+  background-color: brown;
+}
+.project_img{
+ height: 50%;
+ margin-bottom: 5%;
+ margin-top: 5%;
+}
+/*education page */
+.education_page
+{ 
+  height: 98vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;        
+}
+.button_education{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-/*footer for all */
+.about_me{
+  flex-grow: 1;
+  margin: 2%;
+  background-color: pink;
+}
+.motivation{
+  flex-grow: 3;
+  margin: 2%;
+  background-color: darkorange;
+}
+/*Contact page */
 
-.test_footer{
-    background-color: #1A3330;
-    height: 8vh;
+.contact_page {
+    height: 98vh;
     width: 100%;
-    border-top: #33543D solid 2px;
+    justify-content: center;
+    display: flex;
+    
+}
+form{
+  width: 60%;
+  height: auto;
+  border: solid black 2px;
+  margin: auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+form button{
+  margin: 2% 10%;
+
+}
+/*footer for all */
+.middle_border{
+  display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    border-bottom: 1.5px solid black;
+    box-shadow: 0px 1px 3px 0.7px;
+}
+.test_footer{
+  background-color: #1A3330;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ 
 
 }
 
