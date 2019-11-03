@@ -1,8 +1,18 @@
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v7/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJV37Nv7g.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
 body{
     padding: 0;
     margin:0;
     display: flex; 
-    
+    height: 100vh;
+    font-family: 'Fira Code', monospace !important;
     
 }
 .none{
@@ -11,31 +21,32 @@ body{
 .test_nav{
   height: 100vh;
   width: 15%;
-  background-color: #348077;
-  border: #4A3275 solid 1px;
-  border-radius: 0px 5px 5px 0px;
+  background-color: #1A3330;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+.name_nav h2{
+  font-size:1.5em;
+}
 .test_nav ul{
-  margin-top: 150%;
-  padding: auto;
+  margin-top: 80px;
+  padding: 20%;
 }
 .test_nav .fas{
   margin-bottom: 10%!important;
   color: #665A2A ;
 }
 .test_nav .fas:hover{
- transform: scale(2);
- padding-top: 10%;
- padding-bottom: 10%;
+ transform: scale(1.5);
+ padding-top: 5%;
+ padding-bottom: 5%;
 }
 .wrap{
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+   
     position: relative ;
 }
 /*Background welcolme page*/
@@ -50,6 +61,7 @@ body{
     display: flex;
     justify-content: center;
     position: absolute;
+    left: -2.2px;
     z-index: -1;
 }
 .content_bckgnd{
@@ -61,41 +73,48 @@ body{
     align-items: center;
 
 }
+.margin_bottom{
+  margin-bottom: auto;
+}
+.margin_top{
+  margin-top: auto;
+}
 /*animation css */
-.name_animated {
-    font-size: 5em;
-    color: red;
+.name_animated h2 {
+    font-size: 3em!important;
+    font-weight: bold!important;
+    font-family: 'Fira Code', monospace;
     position: relative;
     animation-name: rightoleft ;
-    animation-duration: 6s;
-    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-delay: 1s;
     animation-fill-mode: backwards; /*fait que l'animation commence à la première keyframe*/
 
     
 }
 @keyframes rightoleft {
-  0%   { left: -70%; top:0px;}
-  25%  {right: 25%; top:0%;}
-  50%  { right:25%; top:00px;}
-  75%  { right:25%; top:0px;}
-  100%  {left:0px; top:0px;}
+  0%   { transform: translateX(-200%);}
+  100% { transform: translateX(0);}
 }
 
 .animated_description_nav{
   color:black;
-  animation-name: lefttoright;
-  animation-duration: 6s;
+  animation-name: appears;
+  animation-duration: 4s;
   
   animation-fill-mode: backwards;
 }
-@keyframes lefttoright{
+@keyframes appears{
 
     0% { opacity: 0; }
     80% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-
+h2{
+  font-family: 'Fira Code', monospace;
+  font-size: 3em;
+}
 /* slider test*/
 .slide_size{
     width: 50%;
@@ -104,7 +123,7 @@ body{
 /* skill page css */
 .skill_page{
   
-  height: 98vh;
+  height: 92vh;
   width: 100%;
   justify-content: center;
   display: flex;        
@@ -119,45 +138,48 @@ body{
 /* skill side */
 .animated_skill{
   height: 10%;
-  background-color: coral;
+ 
 }
 .progress_bar_skill{
   height: 60%;
-  background-color: darkcyan;
+  border: solid black 2px;
   margin: 0 0 2% 0;
 }
 .other_skill{
   height: 30%;
-  background-color: darkmagenta;
+  border: solid black 2px;
 }
 /*project side */
 .animated_project{
 height: 10%;
-background-color: blue;
+
 }
 .project{
   height: 90%;
-  background-color: red;
+  border: solid black 2px;
   display: flex;
   flex-wrap: wrap;
 }
 .project_img_bloc{
   width: 50%;
-  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
+
 }
 .project_description_bloc{
   width:50%;
-  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 .project_description{
   height: 50%;
   margin: 5%;
+  border: solid black 2px;
+
 }
 .orange{
   background-color: orange;
@@ -179,7 +201,7 @@ background-color: blue;
 /*education page */
 .education_page
 { 
-  height: 98vh;
+  height: 92vh;
   width: 100%;
   justify-content: center;
   display: flex;        
@@ -193,17 +215,23 @@ background-color: blue;
 .about_me{
   flex-grow: 1;
   margin: 2%;
-  background-color: pink;
+  border: solid black 2px;
+  margin: auto;
+  padding: 2%;
+ 
 }
 .motivation{
+  width: 100%;
   flex-grow: 3;
   margin: 2%;
-  background-color: darkorange;
+  border: solid black 2px;
+  margin: auto;
+  padding: 2%;
 }
 /*Contact page */
 
 .contact_page {
-    height: 98vh;
+    height: 92vh;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -225,11 +253,15 @@ form button{
 }
 /*footer for all */
 .test_footer{
-  background-color: #1A3330;
-  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  background-color:#348077 ;
   width: 100%;
+  height: auto;
+  padding: 1%;
   display: flex;
- justify-content: center;
+  justify-content: center;
+  align-content: space-between;
 
 }
 li{
@@ -238,12 +270,53 @@ li{
 }
 .fas{
   color:#80723B;
-  margin:1%;
+  margin:2%;
 }
 .fab{
   color: #80723B;
-  margin:1%;
+  margin:2%;
 }
+.jello:hover{
+  
+  animation: jello-horizontal 0.9s infinite both;
+  }
+
+  a{
+    margin-right: 2%;
+  }
+
+
+@keyframes jello-horizontal {
+  0% {
+    
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+  
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+   
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    
+            transform: scale3d(1, 1, 1);
+  }
+}
+
 
 /*$duration = 450ms
 $tileWidth = 250px
