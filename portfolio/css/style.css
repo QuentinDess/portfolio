@@ -18,30 +18,19 @@ body{
 .none{
   display: none !important;
 }
-.test_nav{
-  height: 100vh;
-  width: 15%;
-  background-color: #1A3330;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+nav{
+ 
+  margin: auto;
 }
-.name_nav h2{
-  font-size:1.5em;
-}
-.test_nav ul{
-  margin-top: 80px;
-  padding: 20%;
-}
-.test_nav .fas{
+nav .fas{
   margin-bottom: 10%!important;
-  color: #665A2A ;
+  color:#2C468F ;
 }
-.test_nav .fas:hover{
+nav .fas:hover{
  transform: scale(1.5);
- padding-top: 5%;
- padding-bottom: 5%;
+ padding-top: 8%;
+ padding-bottom: 8%;
 }
 .wrap{
     width: 100%;
@@ -101,7 +90,6 @@ body{
   color:black;
   animation-name: appears;
   animation-duration: 4s;
-  
   animation-fill-mode: backwards;
 }
 @keyframes appears{
@@ -126,32 +114,42 @@ h2{
   height: 92vh;
   width: 100%;
   justify-content: center;
-  display: flex;        
+  display: flex;     
+  padding-left: 2%;   
 }
 .half_cut{
-  padding: 7% 0% 1% 2%;
+  padding: 7% 1% 1% 2%;
   width: 50%;
-  border-right: black solid 1px;
+  
   display: flex;
   flex-direction: column;
 }
 /* skill side */
 .animated_skill{
   height: 10%;
+  font-weight: bold!important;
+  background: #348077;
+
  
 }
 .progress_bar_skill{
   height: 60%;
   border: solid black 2px;
   margin: 0 0 2% 0;
+  border-top: none;
 }
 .other_skill{
   height: 30%;
   border: solid black 2px;
 }
 /*project side */
+h3{
+  font-weight: bold!important;
+}
 .animated_project{
 height: 10%;
+font-weight: bold!important;
+background: #348077;
 
 }
 .project{
@@ -159,6 +157,7 @@ height: 10%;
   border: solid black 2px;
   display: flex;
   flex-wrap: wrap;
+  border-top: none;
 }
 .project_img_bloc{
   width: 50%;
@@ -213,6 +212,7 @@ height: 10%;
 }
 
 .about_me{
+  width: 100%;
   flex-grow: 1;
   margin: 2%;
   border: solid black 2px;
@@ -255,7 +255,7 @@ form button{
 .test_footer{
   position: absolute;
   bottom: 0;
-  background-color:#348077 ;
+  background-color:#348077;
   width: 100%;
   height: auto;
   padding: 1%;
@@ -269,12 +269,14 @@ li{
   
 }
 .fas{
-  color:#80723B;
+  color:#2C468F;
   margin:2%;
+   text-shadow:  4px #000; 
 }
 .fab{
-  color: #80723B;
+  color: #2C468F;
   margin:2%;
+  text-shadow:  4px #000; 
 }
 .jello:hover{
   
