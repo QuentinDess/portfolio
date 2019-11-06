@@ -224,13 +224,15 @@ background: #348077;
 .button_education{
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+ 
   
 }
-button{
-  margin: 0% 0% 15% 0%!important;
+.margin_before{
+  margin: 5% 0% 10% 0%!important;
 }
-
+.margin_after{
+  margin-top: 5%!important;
+}
 .about_me{
   width: 100%;
  
@@ -261,7 +263,7 @@ form{
   width: 60%;
   height: auto;
   border: solid black 2px;
-  margin: auto;
+  margin:2% 21% 4% 17%;
   padding: 2%;
   display: flex;
   flex-direction: column;
