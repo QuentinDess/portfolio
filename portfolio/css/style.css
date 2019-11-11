@@ -10,10 +10,33 @@
 body{
     padding: 0;
     margin:0;
-    display: flex; 
-    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
     font-family: 'Fira Code', monospace !important;
+  
+  overflow-y: auto;
     
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #146650; 
+  height: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #073b2e; 
 }
 .none{
   display: none !important;
@@ -41,8 +64,8 @@ nav ul{
 }
 .wrap{
     width: 100%;
-    height: 92vh;
-    overflow-y: auto;
+  HEIGHT : 100%;
+  
     position: relative ;
 }
 .bckgd_div{
@@ -50,21 +73,20 @@ nav ul{
 }
 /*Background welcolme page*/
 .blur_bckgnd{
-    height:95vh;
+    height:100%;
     width: 100%;
     background-image:url("../img/backgroungWecolmeWrap.jpg");
-    filter: hue-rotate(61deg) grayscale(80%) blur(2px);
+    filter: hue-rotate(61deg) grayscale(80%);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     position: fixed;
-    left: -2.2px;
     z-index: -1;
 }
 .content_bckgnd{
-    height:98vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -80,6 +102,7 @@ nav ul{
 }
 /*animation css */
 .name_animated h2 {
+    padding-top: 0;
     font-size: 3em!important;
     font-weight: bold!important;
     font-family: 'Fira Code', monospace;
@@ -121,7 +144,7 @@ h2{
 /* skill page css */
 .skill_page{
   
-  height: 92vh;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   display: flex;     
@@ -227,7 +250,7 @@ background: #348077;
 }
 .education_page
 { 
-  height: 92vh;
+  height: 100%;
   width: 100%;
   justify-content: center;
   display: flex;        
@@ -264,7 +287,7 @@ background: #348077;
 /*Contact page */
 
 .contact_page {
-    height: 92vh;
+  
     width: 100%;
     justify-content: center;
     display: flex;
@@ -286,7 +309,7 @@ form button{
 
 /*footer for all */
 .test_footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   background-color:#348077;
   width: 100%;
@@ -355,7 +378,7 @@ a{
   }
 }
 
-/* progress bar */
+/* progress bar 
 #center {
    width: 600px;
    height: 40px;
@@ -371,7 +394,7 @@ a{
    height: 40px;
   background: #92C81A;
   float: left;
-  animation: stretch 5s infinite linear;
+  animation: stretch 5s  linear;
 }
 
 .row {
@@ -379,7 +402,7 @@ a{
   width: 400px;
   float: left;
   display: inherit;
-  animation: squeeze 5s infinite linear;
+ /* animation: squeeze 5s infinite linear;*/
 }
 
 .sq {
