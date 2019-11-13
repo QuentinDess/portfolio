@@ -218,11 +218,12 @@ background: #348077;
 
 }
 .project_description{
-  height: 50%;
+  height: auto;
   margin: 5%;
   border: solid black 2px;
 
 }
+
 .special_p{
   font-size: 0.8em;
   font-weight: bold;
@@ -241,6 +242,15 @@ background: #348077;
  height: 50%;
  margin-bottom: 5%;
  margin-top: 5%;
+
+}
+.project_image1{
+  background-image : url("../img/project1.png") ;
+  background-size: cover;
+}
+.project_image2{
+  background-image: url("../img/project2.png");
+  background-size: cover;
 }
 /*education page */
 .animated_education{
@@ -403,7 +413,6 @@ a{
   float: left;
   display: inherit;
  /* animation: squeeze 5s infinite linear;*/
-}
 
 .sq {
   height: 10px;
